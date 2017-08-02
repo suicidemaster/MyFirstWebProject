@@ -1,0 +1,116 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm    
+   http://java.sun.com/xml/ns/persistence/orm_2_1.xsd"
+   version="2.1">
+      
+   <description> XML Mapping file</description>
+      
+   <entity class="Plan">        
+      <table name="PLANS"/>
+      <attributes>
+      
+         <id name="planId">
+            <generated-value strategy="TABLE"/>
+         </id>
+
+         <basic name="name">
+            <column name="PLAN_NAME" length="100"/>
+         </basic>
+         
+         <basic name="price">
+         </basic>
+         
+         <basic name="options">
+         </basic>
+         
+      </attributes>
+   </entity>
+   
+   <entity class="Option">        
+      <table name="OPTIONS"/>
+      <attributes>
+      
+         <id name="optionId">
+            <generated-value strategy="TABLE"/>
+         </id>
+
+         <basic name="name">
+            <column name="PLAN_NAME" length="100"/>
+         </basic>
+         
+         <basic name="price">
+         </basic>
+         
+         <basic name="connectionCost">
+         </basic>
+         
+      </attributes>
+   </entity>
+   
+   <entity class="Client">        
+      <table name="CLIENTS"/>
+      <attributes>
+      
+         <id name="clientId">
+            <generated-value strategy="TABLE"/>
+         </id>
+
+         <basic name="name">
+            <column name="PLAN_NAME" length="100"/>
+         </basic>
+         
+		 <basic name="lastname">
+            <column name="PLAN_NAME" length="100"/>
+         </basic>
+		 
+         <basic name="birthday">
+         </basic>
+         
+		 <basic name="passportInfo">
+            <column name="PLAN_NAME" length="255"/>
+         </basic>
+		 
+		 <basic name="address">
+            <column name="PLAN_NAME" length="255"/>
+         </basic>
+		 
+		 <basic name="contacts">
+         </basic>
+		 
+		 <basic name="email">
+            <column name="PLAN_NAME" length="100"/>
+         </basic>
+		 
+		 <basic name="password">
+            <column name="PLAN_NAME" length="20"/>
+         </basic>
+		 
+      </attributes>
+   </entity>
+   
+    <entity class="Contract">        
+      <table name="CONTRACTS"/>
+      <attributes>
+      
+         <id name="contractId">
+            <generated-value strategy="TABLE"/>
+         </id>
+
+         <basic name="number">
+            <column name="PLAN_NAME" length="100"/>
+         </basic>
+         
+         <basic name="plan">
+         </basic>
+         
+         <basic name="options">
+         </basic>
+         
+      </attributes>
+   </entity>
+   
+   
+</entity-mappings>
